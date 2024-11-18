@@ -19,7 +19,7 @@ const Login = ({ onLogin }) => {
     <div className="moving-gradient-background" style={{ width: '100%', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="login-container">
         <div className="login-card">
-          <h2 className="title">AI-Powered Roadmap Generator</h2>
+          <h2 className="title">TechNavigator AI</h2>
           <input
             type="text"
             placeholder="Enter your stack (e.g., frontend)"
