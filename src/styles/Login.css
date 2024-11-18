@@ -1,12 +1,12 @@
 @keyframes float {
     0% {
-    transform: translateY(0px);
+        transform: translateY(0px);
     }
     50% {
-    transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
-    transform: translateY(0px);
+        transform: translateY(0px);
     }
 }
 
@@ -14,54 +14,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     animation: float 6s ease-in-out infinite;
 }
 
 /* Login Card Styling */
 .login-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9); /* Increased background opacity for clarity */
+    backdrop-filter: blur(20px);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #fff;
-    width: 350px;
+    color: #333; /* Dark text for contrast */
+    width: 500px;
 }
 
-/* Title Styling */
-.title {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #f5f5f5;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Input Field Styles */
 .stack-input {
     width: 93%;
-    padding: 12px;
+    padding: 18px;
     margin-bottom: 20px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #ccc; /* Light border for clarity */
     font-size: 1em;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
     outline: none;
     transition: box-shadow 0.3s, transform 0.3s;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+    color: #333; /* Dark text for readability */
 }
-
 
 /* Input Field Focus Animation */
 .stack-input:focus {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.4); /* Blue highlight on focus */
     transform: scale(1.02);
+    border-color: #007bff; /* Blue border on focus */
 }
 
 /* Button Styling */
 .login-button {
-    background: #6a11cb;
+    background: linear-gradient(45deg, #007bff, #6610f2); /* Vibrant blue-purple gradient */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -69,28 +61,29 @@
     font-size: 1em;
     cursor: pointer;
     transition: all 0.4s ease;
-    box-shadow: 0px 8px 20px rgba(106, 17, 203, 0.3);
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.3);
     width: 100%;
 }
 
 .login-button:hover {
-    background: #37fc25;
+    background: linear-gradient(45deg, #28a745, #20c997); /* Green gradient on hover */
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 0px 12px 25px rgba(37, 117, 252, 0.5);
-    color: black;
+    box-shadow: 0px 12px 25px rgba(40, 167, 69, 0.5);
+    color: #fff;
 }
 
 /* Smooth Fade-In Animation */
 @keyframes fadeIn {
     from {
-    opacity: 0;
-    transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
     to {
-    opacity: 1;
-    transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -101,9 +94,9 @@
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-top-color: #000;
+    border-top-color: #007bff; /* Blue spinner */
     animation: spin 0.6s linear infinite;
     margin-right: 8px; 
 }
@@ -112,6 +105,7 @@
     cursor: not-allowed;
     opacity: 0.8;
 }
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -125,35 +119,32 @@
 }
 
 .moving-gradient-background {
-    background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6a00, #ffb547);
+    background: linear-gradient(135deg, #007bff, #6610f2, #28a745, #ffc107);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
 }
 
-  
 .title {
-    font-size: 2.6rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #d4fc79);
+    font-size: 3.6rem;
+    background: linear-gradient(45deg, #007bff, #6610f2, #28a745, #ffc107);
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientText 5s linear infinite;
-    margin-bottom: 20px;
+    animation: gradientText 10s linear infinite, fadeIn 1s ease-in-out;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 /* Animation for the text gradient */
 @keyframes gradientText {
     0% {
-    background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-    background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-    background-position: 0% 50%;
+        background-position: 0% 50%;
     }
 }
-
