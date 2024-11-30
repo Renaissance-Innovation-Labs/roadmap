@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyBMSn4d7qhIG0Bhg-jO5d2ONf73x84miew"); // Replace with your actual API key
+const genAI = new GoogleGenerativeAI("AIzaSyD2YVJ5Q138zY8ISSZ5NSau3y-74u4DX7s"); // Replace with your actual API key
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Helper function for exponential backoff retry
